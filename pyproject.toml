@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isoassign"
+version = "1.0.0"
+description = "Competitive isotope-cluster assignment kernel for centroid mass spectra"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pyteomics>=5.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["isoassign*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
