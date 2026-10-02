@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isoclaim"
+version = "0.1.0"
+description = "Competitive, calibration-aware isotope-cluster assignment kernel for centroid mass spectra"
+requires-python = ">=3.10"
+dependencies = [
+    "pyteomics>=5.0",
+    "scipy>=1.11",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["isoclaim*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
